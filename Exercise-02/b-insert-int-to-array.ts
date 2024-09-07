@@ -7,3 +7,19 @@
 /*  Example : 
         maxSize = 5, given integers is 5, 10, 24, 3, 6, 7, 8 
         The function will return [5, 10, 24, 3, 6] */
+
+const maxInput: number = 5;
+
+function inputIntToArray(max: number, ...integer: number[]) {
+  const resultInputIntToArray: number[] = [];
+
+  integer.forEach((value: number, index: number) => {
+    if (index < max) {
+      resultInputIntToArray.push(value);
+    }
+  });
+  return resultInputIntToArray;
+}
+
+const resultInputIntToArray = inputIntToArray(maxInput, 5, 10, 24, 3, 6, 7, 8);
+console.log(resultInputIntToArray);
