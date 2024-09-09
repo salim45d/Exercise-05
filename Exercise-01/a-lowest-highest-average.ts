@@ -64,3 +64,21 @@ function withoutSort(array: number[]) {
 
 const withoutSortResult: {} = withoutSort(nums);
 console.log(withoutSortResult);
+
+///////////////////
+//BUILT IN METHOD//
+///////////////////
+
+function highLowAverage(array: number[]) {
+  const resultObject: IObject = { lowest: 0, highest: 0, average: 0 };
+
+  resultObject.lowest = Math.min(...array);
+  resultObject.highest = Math.max(...array);
+  resultObject.average =
+    array.reduce((x: number, y: number) => x + y) / array.length;
+
+  return resultObject;
+}
+
+const resultHighLowAverage: {} = highLowAverage(nums);
+console.log(resultHighLowAverage);
