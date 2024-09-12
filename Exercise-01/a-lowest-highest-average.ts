@@ -18,16 +18,11 @@ interface IObject {
 
 function withSort(array: number[]) {
   const resultObject: IObject = { lowest: 0, highest: 0, average: 0 };
-
   nums.sort((x: number, y: number) => {
     return x - y;
   });
   resultObject.lowest = nums[0];
-
-  nums.sort((x: number, y: number) => {
-    return y - x;
-  });
-  resultObject.highest = nums[0];
+  resultObject.highest = nums[nums.length - 1];
 
   nums.forEach((value: number) => {
     resultObject.average += value;
